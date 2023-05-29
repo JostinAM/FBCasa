@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "1076111803089",
-    "project_id": "test-8e331",
-    "storage_bucket": "test-8e331.appspot.com"
+    "project_number": "66928194113",
+    "project_id": "movilefb-eea47",
+    "storage_bucket": "movilefb-eea47.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1076111803089:android:abae97a6b15a5657a6fbf0",
+        "mobilesdk_app_id": "1:66928194113:android:7c99010f6d01ad17060cc0",
         "android_client_info": {
           "package_name": "cr.ac.una.firebase"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDGRt9pbgzUcxcayYanNLiey_uM-cjWtuQ"
+          "current_key": "AIzaSyC5DmUaIHy0wIugbNMtLVILcGFxG5LA0bk"
         }
       ],
       "services": {
