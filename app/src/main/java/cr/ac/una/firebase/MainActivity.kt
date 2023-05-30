@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import cr.ac.una.firebase.entity.Persona
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,8 +26,9 @@ class MainActivity : AppCompatActivity() {
         personasRef = database.getReference("persona")
 
         // Agregar una persona a la base de datos
-        val persona = Persona("Jostin ")
+
         val personaId = personasRef.push().key
+        val persona = Persona(personaId.toString(),"Jostin ")
         personasRef.child(personaId!!).setValue(persona).addOnCompleteListener{
             Toast.makeText(this, "Inserted", Toast.LENGTH_LONG).show()
         }.addOnFailureListener{
