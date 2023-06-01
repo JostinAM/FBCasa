@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/idPersona"
-        android:layout_width="102dp"
+        android:layout_width="220dp"
         android:layout_height="33dp"
         android:layout_marginStart="8dp"
         android:fontFamily="sans-serif"

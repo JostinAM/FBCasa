@@ -23,11 +23,6 @@ class PersonaAdapter(var personas: ArrayList<Persona>): RecyclerView.Adapter<Rec
             ViewHolder(view)
         }
     }
-
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        TODO("Not yet implemented")
-    }
-
     override fun getItemViewType(position: Int): Int {
         return if (position == 0) {
             VIEW_TYPE_HEADER
@@ -36,11 +31,30 @@ class PersonaAdapter(var personas: ArrayList<Persona>): RecyclerView.Adapter<Rec
         }
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+        val item = personas[position]
+
+        if (holder is HeaderViewHolder) {
+            holder.bind()
+        } else if (holder is ViewHolder) {
+            val personaItem = item
+            holder.bind(personaItem)
+        }
     }
 
-    //falta
+
+    override fun getItemCount(): Int {
+        return personas.size
+    }
+
+    fun updateData(newData: ArrayList<Persona>) {
+
+        personas = newData
+        if (!newData.isEmpty())
+            if(newData[0].id !=null)
+                newData.add(0,Persona("",""))
+        notifyDataSetChanged()
+    }
 
     inner class HeaderViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bind(){

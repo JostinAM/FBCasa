@@ -2,4 +2,8 @@
     <string name="app_name">firebase</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="guardar">Guardar</string>
+    <string name="first_fragment_label">Personas</string>
+    <string name="second_fragment_label">Nueva Persona</string>
+    <string name="regresar">Regresar</string>
 </resources>
